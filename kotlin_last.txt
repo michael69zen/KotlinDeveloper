@@ -1,0 +1,196 @@
+--------------------PROGRAMACION_kotlin----------------------------
+------------------------<devZen69>---------------------------------
+___________________________________________________________________
+Tipos de Datos
+-------------------------------------------------------------------
+val myNum: Int = [-214783648 , 2147483647]                // Int
+val myNum: Byte = [-128 , 127]
+val myNum: Short = [-32768 , 32767]
+val myNum: Long = [-9223372036854775807 , 9223372036854775807]
+
+val myDoubleNum: Double = 5.123456789101112    // Double
+val myFloat: Float = 0.123456
+
+val myLetter: Char = 'D'          // Char
+val myBoolean: Boolean = true     // Boolean
+val myText: String = "Hello"      // String
+---------------------------------------------------------------------
+Para convertir un tipo de dato a otro
+-------------------------------------
+toInt()
+toDouble()
+toChar()
+toByte()
+toShort()
+toLong()
+toFloat()
+----------------------------------------------------------------------
+Operadores
+----------
+x = 5	->  x = 5	
+x += 3	->  x = x + 3	
+x -= 3	->  x = x - 3	
+x *= 3	->  x = x * 3	
+x /= 3	->  x = x / 3	
+x %= 3	->  x = x % 3
+---------------------------------------------------------------------
+Operadores de Comparacion / True or False
+-------------------------
+x==y
+x!=y
+x>y
+x<y
+x>=y
+x<=y
+---------------------------------------------------------------------
+Operadores Logicos
+-------------------
+&& and
+|| or
+! not
+--------------------------------------------------------------------
+Metodos de Cadena de Texto
+-------------------------------
+var txt1 = "devZen69"
+var txt2 = "Cris"
+
+println(txt1.length) >>> 8
+println(txt1.toUpperCase()) >>> "DEVZEN69"
+println(txt1.toLowerCase()) >>> "devzen69"
+
+println(txt1.compareTo(txt2)) >>> 0 //si son iguales (!=0 si no lo es) 
+
+println(txt1.indexOf("Z")) >>> 3
+println("Mi nombre es: $txt2 y mi seudonimo: $txt1") >>> "Mi nombre es: Cris y mi seudonimo: devZen69"
+---------------------------------------------------------------------
+Condicionales
+--------------
+val edad = 20
+if (edad < 18) {
+  println("Eres menor de edad")
+} else {
+  println("Ya eres mayor") >>> esto se ejecutará debido a <edad=20>
+------------------------------------------------------------------
+val time = 19
+if (time < 12) {
+  println("Good morning.")
+} else if (time < 20) {
+  println("Good day.") >>> esto se ejecutara debido a <time=19>
+} else {
+  println("Good evening.")
+}
+----------------------------------------------------------------
+val time = 20
+val greeting = if (time < 18) {
+  "Good day."
+} else {
+  "Good evening." 
+}
+  println(greeting) >>> "Good evening"
+-------------------------------------------------------------------
+When para mas de 2 if anidados
+-------------------------------
+val day = 4
+
+val result = when (day) {
+  1 -> "Monday"
+  2 -> "Tuesday"
+  3 -> "Wednesday"
+  4 -> "Thursday"
+  5 -> "Friday"
+  6 -> "Saturday"
+  7 -> "Sunday"
+  else -> "Invalid day."
+}
+println(result) >>> "Thursday"
+---------------------------------------------------------------------
+Bucle while
+--------------------
+var i = 0
+while (i < 5) {
+  println(i)
+  i++
+} 
+______________________
+do/while
+---------
+var i = 0
+do {
+  println(i)
+  i++
+  }
+while (i < 5) 
+______________________
+var i = 0
+while (i < 10) {
+  println(i)
+  i++
+  if (i == 4) {
+    break
+  }
+}
+-----------------------
+var i = 0
+while (i < 10) {
+  if (i == 4) {
+    i++
+    continue
+  }
+  println(i)
+  i++
+}
+
+_________________________________________________________________
+Arrays
+-----------
+val cars = arrayOf("Volvo", "BMW", "Ford", "Mazda")
+
+println(cars[0]) >>> "Volvo"
+---------------------------------------------------
+cars[0] = "Cris" // "Cris" insted of "Volvo"
+println(cars[0]) >>> Cris 
+----------------------------------------------
+if ("BMW" in cars) {
+  println("It exists!")
+} else {
+  println("It does not exist.")
+}
+---------------------------------------------------
+// nro de elementos de un array
+println(cars.size) >>> 4
+-----------------------------------
+if ("Mazda" in cars) {
+  println("It exists!") >>> se ejecutara porque si esta en el arreglo
+} else {
+  println("It does not exist.")
+}
+________________________________________________________________
+Bucle For
+---------------------------------------------------
+val cars = arrayOf("Volvo", "BMW", "Ford", "Mazda")
+
+for (x in cars) {
+  println(x)
+}
+---------------------------------------------------
+for (chars in 'a'..'x') {
+  println(chars)
+}
+---------------------------
+for (nums in 5..15) {
+  println(nums)
+} 
+-----------------------------
+for (nums in 5..15) {
+  if (nums == 10) {
+    break
+  }
+  println(nums)
+} 
+-----------------------------
+for (nums in 5..15) {
+  if (nums == 10) {
+    continue
+  }
+  println(nums)
+} 
